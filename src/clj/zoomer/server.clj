@@ -1,5 +1,5 @@
-(ns hammer-cljs.server
-  (:require [hammer-cljs.handler :refer [app]]
+(ns zoomer.server
+  (:require [zoomer.handler :refer [app]]
             [config.core :refer [env]]
             [ring.adapter.jetty :refer [run-jetty]])
   (:gen-class))

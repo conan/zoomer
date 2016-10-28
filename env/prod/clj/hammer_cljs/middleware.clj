@@ -1,4 +1,4 @@
-(ns hammer-cljs.middleware
+(ns zoomer.middleware
   (:require [ring.middleware.defaults :refer [site-defaults wrap-defaults]]))
 
 (defn wrap-middleware [handler]

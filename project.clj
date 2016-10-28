@@ -1,6 +1,6 @@
-(defproject hammer-cljs "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+(defproject zoomer "0.1.0-SNAPSHOT"
+  :description "An example of using touch gestures with Hammer.js in ClojureScript"
+  :url "https://github.com/conan/zoomer"
   :license {:name "Eclipse Public License"
             :url  "http://www.eclipse.org/legal/epl-v10.html"}
 
@@ -21,14 +21,14 @@
             [lein-cljsbuild "1.1.1"]
             [lein-asset-minifier "0.2.7" :exclusions [org.clojure/clojure]]]
 
-  :ring {:handler      hammer-cljs.handler/app
-         :uberwar-name "hammer-cljs.war"}
+  :ring {:handler      zoomer.handler/app
+         :uberwar-name "zoomer.war"}
 
   :min-lein-version "2.5.0"
 
-  :uberjar-name "hammer-cljs.jar"
+  :uberjar-name "zoomer.jar"
 
-  :main hammer-cljs.server
+  :main zoomer.server
 
   :clean-targets ^{:protect false} [:target-path
                                     [:cljsbuild :builds :app :compiler :output-dir]
@@ -36,7 +36,6 @@
 
   :source-paths ["src/clj"]
   :resource-paths ["resources" "target/cljsbuild"]
-
   :minify-assets {:assets {"resources/public/css/site.min.css" "resources/public/css/site.css"}}
 
   :cljsbuild {:builds {:min
@@ -49,7 +48,7 @@
                        :app
                        {:source-paths ["src/cljs" "env/dev/cljs"]
                         :compiler
-                                      {:main          "hammer-cljs.dev"
+                                      {:main          "zoomer.dev"
                                        :asset-path    "/js/out"
                                        :output-to     "resources/public/js/app.js"
                                        :output-dir    "resources/public/js/out"
@@ -63,7 +62,7 @@
              :nrepl-port       7002
              :nrepl-middleware ["cemerick.piggieback/wrap-cljs-repl"]
              :css-dirs         ["resources/public/css"]
-             :ring-handler     hammer-cljs.handler/app}
+             :ring-handler     zoomer.handler/app}
 
 
   :profiles {:dev     {:repl-options {:init-ns repl}

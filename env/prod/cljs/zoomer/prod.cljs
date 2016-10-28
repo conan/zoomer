@@ -1,5 +1,5 @@
-(ns hammer-cljs.prod
-  (:require [hammer-cljs.core :as core]))
+(ns zoomer.prod
+  (:require [zoomer.core :as core]))
 
 ;;ignore println statements in prod
 (set! *print-fn* (fn [& _]))

@@ -1,5 +1,5 @@
-(ns hammer-cljs.repl
-  (:use hammer-cljs.handler
+(ns zoomer.repl
+  (:use zoomer.handler
         ring.server.standalone
         [ring.middleware file-info file]))
 

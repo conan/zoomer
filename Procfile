@@ -1,1 +1,1 @@
-web: java $JVM_OPTS -cp target/hammer-cljs.jar clojure.main -m hammer-cljs.server
+web: java $JVM_OPTS -cp target/zoomer.jar clojure.main -m zoomer.server

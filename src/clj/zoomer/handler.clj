@@ -1,8 +1,8 @@
-(ns hammer-cljs.handler
+(ns zoomer.handler
   (:require [compojure.core :refer [GET defroutes]]
             [compojure.route :refer [not-found resources]]
             [hiccup.page :refer [include-js include-css html5]]
-            [hammer-cljs.middleware :refer [wrap-middleware]]
+            [zoomer.middleware :refer [wrap-middleware]]
             [config.core :refer [env]]))
 
 (def mount-target
