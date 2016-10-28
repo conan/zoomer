@@ -21,13 +21,15 @@
       {:component-did-mount
        (fn [this]
          (let [mc (new js/Hammer.Manager (r/dom-node this))]
+
            ;; Doubletap
            (js-invoke mc "add" (new js/Hammer.Tap #js{"event" "doubletap" "taps" 2}))
            (js-invoke mc "on" "doubletap" #(if (= 1 (:scale @!zoom))
                                             (swap! !zoom assoc :scale 2)
                                             (swap! !zoom assoc :scale 1)))
            ;; Pan
-           (js-invoke mc "add" (new js/Hammer.Pan #js{"direction" js/Hammer.DIRECTION_ALL "threshold" 0}))
+           (js-invoke mc "add" (new js/Hammer.Pan #js{"direction" js/Hammer.DIRECTION_ALL
+                                                      "threshold" 0}))
            (js-invoke mc "on" "panstart" #(reset! !start-zoom @!zoom))
            (js-invoke mc "on" "pan" #(let [{:keys [x y]} @!start-zoom]
                                       (swap! !zoom assoc :x (+ x (.-deltaX %))
