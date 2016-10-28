@@ -24,7 +24,7 @@
     (head)
     [:body {:class "body-container"}
      mount-target
-     (include-js "/js/app.js")]))
+     (include-js "/js/zoomer.js")]))
 
 
 (defroutes routes

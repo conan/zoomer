@@ -41,7 +41,7 @@
   :cljsbuild {:builds {:min
                        {:source-paths ["src/cljs" "env/prod/cljs"]
                         :compiler
-                                      {:output-to     "target/cljsbuild/public/js/app.js"
+                                      {:output-to     "target/cljsbuild/public/js/zoomer.js"
                                        :output-dir    "target/uberjar"
                                        :optimizations :advanced
                                        :pretty-print  false}}
@@ -50,7 +50,7 @@
                         :compiler
                                       {:main          "zoomer.dev"
                                        :asset-path    "/js/out"
-                                       :output-to     "resources/public/js/app.js"
+                                       :output-to     "resources/public/js/zoomer.js"
                                        :output-dir    "resources/public/js/out"
                                        :source-map    true
                                        :optimizations :none

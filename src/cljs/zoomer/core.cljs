@@ -48,7 +48,7 @@
        :reagent-render
        (fn [_]
          [:div.zoomer
-          [:img {:src   "/images/clojure-logo.png"
+          [:img {:src   "images/clojure-logo.png"
                  :style (transform @!zoom)}]])
 
        :component-will-unmount
