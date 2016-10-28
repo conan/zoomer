@@ -6,10 +6,10 @@
 (defn transform
   "Generates a cross-browser style for performing efficient CSS transforms"
   [{:keys [x y scale]}]
-  (let [transform (str "translate3d(" x "px, " y "px, 0px) scale(" scale "," scale ")")]
-    {:WebkitTransform transform
-     :MozTransform    transform
-     :transform       transform}))
+  (let [xform (str "translate3d(" x "px, " y "px, 0px) scale(" scale "," scale ")")]
+    {:WebkitTransform xform
+     :MozTransform    xform
+     :transform       xform}))
 
 
 (defn zoomer
