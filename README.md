@@ -5,7 +5,11 @@ An example application for handling touch gestures using
 
 ## Usage
 
+Run:
+
     lein figwheel
+    
+Then navigate to [http://localhost:3449](http://localhost:3449)
     
 ## Requirements:
 
